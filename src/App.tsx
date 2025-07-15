@@ -11,14 +11,14 @@ import { JobsList } from './pages/JobsList'
 import { TasksDashboard } from './pages/TasksDashboard'
 import { TasksList } from './pages/TasksList'
 import { Contacts } from './pages/Contacts'
-import { useMobile } from './hooks/use-mobile'
+import { useIsMobile } from './hooks/use-mobile'
 import { Sheet, SheetContent, SheetTrigger } from './components/ui/sheet'
 import { Button } from './components/ui/button'
 import { Menu } from 'lucide-react'
 
 function App() {
   const [sidebarOpen, setSidebarOpen] = useState(false)
-  const isMobile = useMobile()
+  const isMobile = useIsMobile()
 
   const SidebarContent = () => (
     <Sidebar onNavigate={() => setSidebarOpen(false)} />
